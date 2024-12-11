@@ -96,9 +96,6 @@ async def check_agreements(query, context: ContextTypes.DEFAULT_TYPE):
         return ConversationHandler.END
 
 async def handle_agreement_response(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """
-    Handle user's response to the agreement.
-    """
     query = update.callback_query
     await query.answer()  # Acknowledge the button press
     action = query.data
